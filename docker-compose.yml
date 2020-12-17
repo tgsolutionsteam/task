@@ -26,6 +26,9 @@ services:
       - "3301:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=task
+      - MYSQL_USER=task
+      - MYSQL_PASSWORD=KwQgcTvYBO4yuBB43VCHS2g5
     networks:
       task:
         ipv4_address: 172.16.237.3
@@ -68,6 +71,10 @@ services:
     container_name: task_php
     build:
       context: ./docker
+    environment:
+      - MYSQL_HOST=mysql.dockery
+      - REDIS_HOST=redis.dockery
+      - RABBIT_HOST=rabbitmq.dockery
     volumes:
       - ${TASK_DIR}:/var/www/task
       - ./configs/php/php.ini:/usr/local/etc/php/php.ini:ro

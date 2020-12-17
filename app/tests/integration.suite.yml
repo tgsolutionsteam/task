@@ -1,0 +1,11 @@
+actor: IntegrationTester
+
+modules:
+  step_decorators: ~
+  enabled:
+    - Asserts
+    - \Helper\Integration
+    - Phalcon:
+        bootstrap: 'src/config/bootstrap.php'
+        cleanup: true
+        savepoints: true

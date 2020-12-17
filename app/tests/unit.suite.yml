@@ -1,0 +1,11 @@
+actor: UnitTester
+
+modules:
+  step_decorators: ~
+  enabled:
+    - Asserts
+    - \Helper\Unit
+    - Phalcon:
+        bootstrap: 'src/config/bootstrap.php'
+        cleanup: true
+        savepoints: true

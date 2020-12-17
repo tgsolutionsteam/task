@@ -1,0 +1,81 @@
+2020/12/17 23:14:15 [error] 6#6: *20 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught SebastianBergmann\CodeCoverage\RuntimeException: XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php:50
+Stack trace:
+#0 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(904): SebastianBergmann\CodeCoverage\Driver\Xdebug->__construct(Object(SebastianBergmann\CodeCoverage\Filter))
+#1 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(147): SebastianBergmann\CodeCoverage\CodeCoverage->selectDriver(Object(SebastianBergmann\CodeCoverage\Filter))
+#2 /var/www/task/c3.php(253): SebastianBergmann\CodeCoverage\CodeCoverage->__construct()
+#3 /var/www/task/c3.php(362): __c3_factory(NULL)
+#4 /var/www/task/public/index.php(4): include('/var/www/task/c...')
+#5 {main}
+  thrown in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 50" while reading response header from upstream, client: 172.16.237.7, server: task.dockery, request: "POST /symbols HTTP/1.1", upstream: "fastcgi://172.16.237.7:9000", host: "172.16.237.2"
+2020/12/17 23:14:15 [error] 6#6: *22 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught SebastianBergmann\CodeCoverage\RuntimeException: XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php:50
+Stack trace:
+#0 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(904): SebastianBergmann\CodeCoverage\Driver\Xdebug->__construct(Object(SebastianBergmann\CodeCoverage\Filter))
+#1 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(147): SebastianBergmann\CodeCoverage\CodeCoverage->selectDriver(Object(SebastianBergmann\CodeCoverage\Filter))
+#2 /var/www/task/c3.php(253): SebastianBergmann\CodeCoverage\CodeCoverage->__construct()
+#3 /var/www/task/c3.php(362): __c3_factory(NULL)
+#4 /var/www/task/public/index.php(4): include('/var/www/task/c...')
+#5 {main}
+  thrown in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 50" while reading response header from upstream, client: 172.16.237.7, server: task.dockery, request: "DELETE /cache HTTP/1.1", upstream: "fastcgi://172.16.237.7:9000", host: "172.16.237.2"
+2020/12/17 23:14:15 [error] 6#6: *24 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught SebastianBergmann\CodeCoverage\RuntimeException: XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php:50
+Stack trace:
+#0 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(904): SebastianBergmann\CodeCoverage\Driver\Xdebug->__construct(Object(SebastianBergmann\CodeCoverage\Filter))
+#1 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(147): SebastianBergmann\CodeCoverage\CodeCoverage->selectDriver(Object(SebastianBergmann\CodeCoverage\Filter))
+#2 /var/www/task/c3.php(253): SebastianBergmann\CodeCoverage\CodeCoverage->__construct()
+#3 /var/www/task/c3.php(362): __c3_factory(NULL)
+#4 /var/www/task/public/index.php(4): include('/var/www/task/c...')
+#5 {main}
+  thrown in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 50" while reading response header from upstream, client: 172.16.237.7, server: task.dockery, request: "DELETE /cache/symbols HTTP/1.1", upstream: "fastcgi://172.16.237.7:9000", host: "172.16.237.2"
+2020/12/17 23:14:15 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught SebastianBergmann\CodeCoverage\RuntimeException: XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php:50
+Stack trace:
+#0 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(904): SebastianBergmann\CodeCoverage\Driver\Xdebug->__construct(Object(SebastianBergmann\CodeCoverage\Filter))
+#1 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(147): SebastianBergmann\CodeCoverage\CodeCoverage->selectDriver(Object(SebastianBergmann\CodeCoverage\Filter))
+#2 /var/www/task/c3.php(253): SebastianBergmann\CodeCoverage\CodeCoverage->__construct()
+#3 /var/www/task/c3.php(362): __c3_factory(NULL)
+#4 /var/www/task/public/index.php(4): include('/var/www/task/c...')
+#5 {main}
+  thrown in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 50" while reading response header from upstream, client: 172.16.237.7, server: task.dockery, request: "POST /symbols HTTP/1.1", upstream: "fastcgi://172.16.237.7:9000", host: "172.16.237.2"
+2020/12/17 23:14:15 [error] 6#6: *28 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught SebastianBergmann\CodeCoverage\RuntimeException: XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php:50
+Stack trace:
+#0 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(904): SebastianBergmann\CodeCoverage\Driver\Xdebug->__construct(Object(SebastianBergmann\CodeCoverage\Filter))
+#1 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(147): SebastianBergmann\CodeCoverage\CodeCoverage->selectDriver(Object(SebastianBergmann\CodeCoverage\Filter))
+#2 /var/www/task/c3.php(253): SebastianBergmann\CodeCoverage\CodeCoverage->__construct()
+#3 /var/www/task/c3.php(362): __c3_factory(NULL)
+#4 /var/www/task/public/index.php(4): include('/var/www/task/c...')
+#5 {main}
+  thrown in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 50" while reading response header from upstream, client: 172.16.237.7, server: task.dockery, request: "GET /symbols HTTP/1.1", upstream: "fastcgi://172.16.237.7:9000", host: "172.16.237.2"
+2020/12/17 23:14:15 [error] 6#6: *30 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught SebastianBergmann\CodeCoverage\RuntimeException: XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php:50
+Stack trace:
+#0 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(904): SebastianBergmann\CodeCoverage\Driver\Xdebug->__construct(Object(SebastianBergmann\CodeCoverage\Filter))
+#1 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(147): SebastianBergmann\CodeCoverage\CodeCoverage->selectDriver(Object(SebastianBergmann\CodeCoverage\Filter))
+#2 /var/www/task/c3.php(253): SebastianBergmann\CodeCoverage\CodeCoverage->__construct()
+#3 /var/www/task/c3.php(362): __c3_factory(NULL)
+#4 /var/www/task/public/index.php(4): include('/var/www/task/c...')
+#5 {main}
+  thrown in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 50" while reading response header from upstream, client: 172.16.237.7, server: task.dockery, request: "PUT /symbols/1 HTTP/1.1", upstream: "fastcgi://172.16.237.7:9000", host: "172.16.237.2"
+2020/12/17 23:14:15 [error] 6#6: *32 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught SebastianBergmann\CodeCoverage\RuntimeException: XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php:50
+Stack trace:
+#0 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(904): SebastianBergmann\CodeCoverage\Driver\Xdebug->__construct(Object(SebastianBergmann\CodeCoverage\Filter))
+#1 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(147): SebastianBergmann\CodeCoverage\CodeCoverage->selectDriver(Object(SebastianBergmann\CodeCoverage\Filter))
+#2 /var/www/task/c3.php(253): SebastianBergmann\CodeCoverage\CodeCoverage->__construct()
+#3 /var/www/task/c3.php(362): __c3_factory(NULL)
+#4 /var/www/task/public/index.php(4): include('/var/www/task/c...')
+#5 {main}
+  thrown in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 50" while reading response header from upstream, client: 172.16.237.7, server: task.dockery, request: "POST / HTTP/1.1", upstream: "fastcgi://172.16.237.7:9000", host: "172.16.237.2"
+2020/12/17 23:14:15 [error] 6#6: *34 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught SebastianBergmann\CodeCoverage\RuntimeException: XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php:50
+Stack trace:
+#0 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(904): SebastianBergmann\CodeCoverage\Driver\Xdebug->__construct(Object(SebastianBergmann\CodeCoverage\Filter))
+#1 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(147): SebastianBergmann\CodeCoverage\CodeCoverage->selectDriver(Object(SebastianBergmann\CodeCoverage\Filter))
+#2 /var/www/task/c3.php(253): SebastianBergmann\CodeCoverage\CodeCoverage->__construct()
+#3 /var/www/task/c3.php(362): __c3_factory(NULL)
+#4 /var/www/task/public/index.php(4): include('/var/www/task/c...')
+#5 {main}
+  thrown in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 50" while reading response header from upstream, client: 172.16.237.7, server: task.dockery, request: "GET /oas HTTP/1.1", upstream: "fastcgi://172.16.237.7:9000", host: "172.16.237.2"
+2020/12/17 23:14:15 [error] 6#6: *36 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught SebastianBergmann\CodeCoverage\RuntimeException: XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php:50
+Stack trace:
+#0 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(904): SebastianBergmann\CodeCoverage\Driver\Xdebug->__construct(Object(SebastianBergmann\CodeCoverage\Filter))
+#1 /var/www/task/vendor/phpunit/php-code-coverage/src/CodeCoverage.php(147): SebastianBergmann\CodeCoverage\CodeCoverage->selectDriver(Object(SebastianBergmann\CodeCoverage\Filter))
+#2 /var/www/task/c3.php(253): SebastianBergmann\CodeCoverage\CodeCoverage->__construct()
+#3 /var/www/task/c3.php(362): __c3_factory(NULL)
+#4 /var/www/task/public/index.php(4): include('/var/www/task/c...')
+#5 {main}
+  thrown in /var/www/task/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 50" while reading response header from upstream, client: 172.16.237.7, server: task.dockery, request: "GET /rates HTTP/1.1", upstream: "fastcgi://172.16.237.7:9000", host: "172.16.237.2"
