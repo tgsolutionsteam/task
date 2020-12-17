@@ -1,0 +1,21 @@
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+actor_suffix: Tester
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+coverage:
+    enabled: true
+    include:
+        - src/*
+    exclude:
+        - src/config/*
+        - src/Middlewares/*
+        - src/Providers/*
+        - src/HttpClient/*
+        - src/Observers/*
+        - src/Controllers/*

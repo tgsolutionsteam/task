@@ -1,0 +1,461 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "TASK API",
+    "description": "Simple Api to manage currency rates",
+    "version": "0.0.1"
+  },
+  "paths": {
+    "/symbols": {
+      "get": {
+        "tags": [
+          "Symbols"
+        ],
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Field and your value to search. e.g.:  /symbols/?symbol=EUR&rate_date=01-01-2020",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "e.g.:  /symbols/?limit=100",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "e.g.:  /symbols/?offset=1",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "columns",
+            "in": "query",
+            "description": "Columns to show. e.g.:  /symbols/?columns=name,id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Keywords Fields to sort. e.g.:  /symbols/?sort=name,asc;id,desc",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "List of all Symbols",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "content": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Symbols"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error with sent parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "content": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ErrorModel"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Symbols"
+        ],
+        "description": "Add in database.",
+        "requestBody": {
+          "description": "All fields are necessary.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Symbols"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Response_Created"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error with sent parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "content": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ErrorModel"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/symbols/{symbol_id}": {
+      "get": {
+        "tags": [
+          "Symbols"
+        ],
+        "parameters": [
+          {
+            "name": "symbol_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "List specific symbol",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "content": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Symbols"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error with sent parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "content": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ErrorModel"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Symbols"
+        ],
+        "description": "Add in database.",
+        "parameters": [
+          {
+            "name": "symbol_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "All fields are necessary.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Symbols"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Response_Created"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error with sent parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "content": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ErrorModel"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rates": {
+      "get": {
+        "tags": [
+          "Rates"
+        ],
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Field and your value to search. e.g.:  /rates/?symbol=EUR&rate_date=01-01-2020",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "e.g.:  /rates/?limit=100",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "e.g.:  /rates/?offset=1",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "columns",
+            "in": "query",
+            "description": "Columns to show. e.g.:  /rates/?columns=name,id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Keywords Fields to sort. e.g.:  /rates/?sort=name,asc;id,desc",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "List of all Rates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "content": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Rates"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error with sent parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "content": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ErrorModel"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "XMLRPC"
+        ],
+        "responses": {
+          "200": {
+            "description": "Executes Remote Procedure Calls"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "XMLRPC"
+        ],
+        "responses": {
+          "200": {
+            "description": "Executes Remote Procedure Calls"
+          }
+        }
+      }
+    },
+    "/oas": {
+      "get": {
+        "tags": [
+          "OpenAPI"
+        ],
+        "responses": {
+          "201": {
+            "description": "OAS Spec"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Symbols": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Symbols"
+          },
+          {
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "unsigned"
+              },
+              "symbol": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "Rates": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Rates"
+          },
+          {
+            "properties": {
+              "base": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string",
+                "format": "datetime"
+              },
+              "rates": {
+                "type": "array",
+                "format": "string"
+              }
+            }
+          }
+        ]
+      },
+      "Response_Created": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Response_Created"
+          },
+          {
+            "properties": {
+              "resultsFiltered": {
+                "type": "integer"
+              },
+              "resultsTotal": {
+                "type": "integer"
+              },
+              "data": {
+                "type": "array"
+              }
+            }
+          }
+        ]
+      },
+      "ErrorModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorModel"
+          },
+          {
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

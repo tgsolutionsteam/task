@@ -1,0 +1,11 @@
+actor: ApiTester
+
+modules:
+  step_decorators: ~
+  enabled:
+    - \Helper\Api
+    - REST:
+        depends: PhpBrowser
+        part: Json
+    - PhpBrowser:
+        url: http://172.16.237.2
